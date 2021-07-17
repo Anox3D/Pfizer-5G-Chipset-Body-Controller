@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <!-- Title -->
+        <title>Pfizer 5G Chipset Body Controller</title>
+        <!-- Style -->
+        <link href="./css/main-style.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Titlebar -->
+        <header w3-include-html="./includes/header.html"></header>
+        <div class="buttons">
+            <button id="minimize-button">
+                <svg class="icon icon-minimize"><use xlink:href="#icon-minimize">
+                    <symbol id="icon-minimize" viewBox="0 0 32 32">
+                        <path d="M0 14.5h32v3h-32v-3z"></path>
+                    </symbol>
+                </use></svg>
+            </button>
+            <button id="close-button">
+                <svg class="icon icon-close"><use xlink:href="#icon-close">
+                    <symbol id="icon-close" viewBox="0 0 32 32">
+                        <path d="M16 18.12l13.88 13.88h2.12v-2.12l-13.88-13.88 13.88-13.88v-2.12h-2.12l-13.88 13.88-13.88-13.88h-2.12v2.12l13.88 13.88-13.88 13.88v2.12h2.12l13.88-13.88z"></path>
+                    </symbol>
+                </use></svg>
+            </button>
+        </div>
+
+        <div>
+            <input type="text" placeholder="XXX" min="3" max="3"> - <input type="text" placeholder="XXX" min="3" max="3"> - <input type="text" placeholder="XXX" min="3" max="3">
+        </div>
+
+        <!-- Scripts -->
+        <script src="./js/libs/w3.js"></script>
+        <script>
+            w3.includeHTML();
+        </script>
+        <script src="./js/minimize-close.js"></script>
+        <script>
+            function createValidator(element){
+                return function(){
+                    const min = parseInt(element.getAttribute("min"));
+                    const max = parseInt(element.getAttribute("max"));
+
+                    const value = parseInt(element.value);
+
+                    if(value < min){
+                        element.value = min;
+                    }
+
+                    if(value > max){
+                        element.value = max;
+                    }
+                }
+            }
+
+            const inputElement = document.querySelector('input');
+            inputElement.onkeyup = createValidator(inputElement);
+        </script>
+    </body>
+</html>

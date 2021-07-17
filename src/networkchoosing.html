@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <!-- Title -->
+        <title>Pfizer 5G Chipset Body Controller</title>
+        <!-- Styles -->
+        <link href="./css/main-style.css" rel="stylesheet">
+        <link href="./css/network-choosing-style.css" rel="stylesheet">
+        <link href="./css/loading-spinner-style.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Titlebar -->
+        <header w3-include-html="./includes/header.html"></header>
+        <div class="buttons">
+            <button id="minimize-button">
+                <svg class="icon icon-minimize"><use xlink:href="#icon-minimize">
+                    <symbol id="icon-minimize" viewBox="0 0 32 32">
+                        <path d="M0 14.5h32v3h-32v-3z"></path>
+                    </symbol>
+                </use></svg>
+            </button>
+            <button id="close-button">
+                <svg class="icon icon-close"><use xlink:href="#icon-close">
+                    <symbol id="icon-close" viewBox="0 0 32 32">
+                        <path d="M16 18.12l13.88 13.88h2.12v-2.12l-13.88-13.88 13.88-13.88v-2.12h-2.12l-13.88 13.88-13.88-13.88h-2.12v2.12l13.88 13.88-13.88 13.88v2.12h2.12l13.88-13.88z"></path>
+                    </symbol>
+                </use></svg>
+            </button>
+        </div>
+
+        <div id="content">
+            <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+        </div>
+
+        <!-- Script -->
+        <script src="./js/libs/w3.js"></script>
+        <script>
+            w3.includeHTML();
+        </script>
+        <script src="./js/minimize-close.js"></script>
+        <script>
+            setTimeout(function(){
+                if(navigator.onLine){
+                    content.innerHTML = '<select name="network"><option value="-- Select network --">-- Select network --</option><option value="Axawa">asasas</option><option value="Axawa">saasas</option><option value="Axawa">asasa</option></select>';
+                } else {
+                    content.innerHTML = "Can't find any network or inability to use the Wi-Fi device.";
+                }
+            }, 2000);
+        </script>
+    </body>
+</html>

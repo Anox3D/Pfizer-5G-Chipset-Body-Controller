@@ -1,0 +1,45 @@
+body {
+    cursor: default;
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: 'Consolas';
+    src: url("../fonts/consola.ttf");
+}
+
+header {
+    width: 92.75%;
+    -webkit-app-region: drag;
+    display: inline-block;
+}
+
+header span#version {
+    font-family: 'Consolas', sans-serif;
+    font-size: 13.5px;
+    color: gray;
+    display: block;
+    position: relative;
+    left: 80px;
+    bottom: 5px;
+}
+
+div.buttons {
+    float: right;
+}
+
+div.buttons button {
+    background: none;
+    border: none;
+}
+
+.icon {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    fill: rgba(128, 128, 128, 0.5);
+}
+
+.icon:hover {
+    fill: rgba(128, 128, 128, 1);
+}

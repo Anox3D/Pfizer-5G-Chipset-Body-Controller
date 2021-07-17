@@ -1,0 +1,24 @@
+{
+  "name": "pfizer-5g-chipset-body-controller",
+  "version": "1.0.0",
+  "description": "Pfizer's vaccine chipset body controller",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anox3D/Pfizer-5G-Chipset-Body-Controller.git"
+  },
+  "author": "@Anox3D",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/Anox3D/Pfizer-5G-Chipset-Body-Controller/issues"
+  },
+  "homepage": "https://github.com/Anox3D/Pfizer-5G-Chipset-Body-Controller#readme",
+  "devDependencies": {
+    "custom-electron-titlebar": "^3.2.7",
+    "electron": "^13.1.4"
+  },
+  "dependencies": {}
+}
